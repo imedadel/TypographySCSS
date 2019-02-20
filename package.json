@@ -6,6 +6,19 @@
   "repository": "https://github.com/ImedAdel/TypographySCSS",
   "author": "Imed Adel",
   "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rimraf dist/css/*",
+    "autoprefixer": "postcss -u autoprefixer -r dist/css/*",
+    "scss": "node-sass --output-style compressed src/scss/ -o dist/css/",
+    "lint-scss": "stylelint \"src/scss/*.scss\" --syntax scss || true",
+    "serve": "browser-sync start --server \"./\" --files \"dist/css/*.css, dist/js/*.js, !node_modules/**/*.html\"",
+    "build:css": "run-s lint-scss scss autoprefixer",
+    "build": "run-s build:*",
+    "watch:css": "onchange \"src/scss\" -- run-s build:css",
+    "watch": "run-p serve watch:*",
+    "postinstall": "run-s build watch"
+  },
   "devDependencies": {
     "autoprefixer": "^9.4.8",
     "browser-sync": "^2.26.3",
