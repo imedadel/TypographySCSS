@@ -1,0 +1,20 @@
+{
+  "name": "TypographySCSS",
+  "version": "1.0.0",
+  "description": "A SCSS toolkit for building modern websites with beautiful typography",
+  "main": "index.js",
+  "repository": "https://github.com/ImedAdel/TypographySCSS",
+  "author": "Imed Adel",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^9.4.8",
+    "browser-sync": "^2.26.3",
+    "mkdirp": "^0.5.1",
+    "node-sass": "^4.11.0",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^5.2.0",
+    "postcss-cli": "^6.1.1",
+    "rimraf": "^2.6.3",
+    "stylelint": "^9.10.1"
+  }
+}
